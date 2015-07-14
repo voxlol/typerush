@@ -10,7 +10,7 @@ angular.module("app").controller("MainController", ['$scope', '$stateParams', '$
     }
     $scope.checkLength = function(length){
       if(length >=  10)
-        return true
+        return true;
       else
         return false;
     }
