@@ -9,5 +9,7 @@ autopublish
 insecure
 urigo:angular
 angularui:angular-ui-router
-accounts-base
 accounts-ui
+accounts-github
+ajbarry:yahoo-finance
+accounts-password

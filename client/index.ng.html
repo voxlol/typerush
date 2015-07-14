@@ -1,2 +1,7 @@
-<p> nothing here </p>
-{{greeting}}
+<p> ID : {{greeting._id}} </p>
+<p> Message : {{ greeting.name }}</p>
+<p> Length of MSG : {{ greeting.name.length }}</p>
+<p> ???? : {{greeting.booga}}</p>
+<p ng-show="checkLength(greeting.name.length)"> So long! </p>
+<input ng-model="greeting.name" />
+<button id="doit" type="submit" value="submit" ng-click="log()">SUBMIT</button>
