@@ -4,8 +4,13 @@
 </head>
 
 <body ng-app="app">
+  <div class="nav nav-bar">
+    <a href="/">Home | </a>
+    <a href="/create">Create Game | </a>
+    {{ > loginButtons}}
+  </div>
 
-  {{ > loginButtons}}
+
   <!-- <div ng-include="'client/index.ng.html'"></div> -->
-  <div ui-view></div>
+  <div class="container" ui-view></div>
 </body>

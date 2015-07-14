@@ -1,0 +1,12 @@
+<div class="match">
+ ADMIN IS : {{ creator }}<br>
+ {{match._id}}
+  <h2>MATCH TEXT</h2>
+  <div class="text">{{match.text}}</div>
+  <h3>Current Players</h3>
+  {{match.id}}
+
+  <ul ng-repeat="player in match.players">
+    <li>{{player.email}}</li>
+  </ul>
+</div>

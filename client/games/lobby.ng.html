@@ -1,0 +1,12 @@
+<h2 style="color:red;" ng-hide="signedIn()">Please Sign in to View the Lobby</h2>
+
+<h3 ng-hide="amountOfGames()">No current games. Create one above!</h3>
+<ul ng-repeat="game in games" ng-show="signedIn()">
+  <li>
+    <div class="lobby">
+      <a href="/game/{{game._id}}" ng-click="joinGame(game)">JOIN GAME {{$index+1}}</a>
+      <br>
+      Currently {{game.players.length}} players
+    </div>
+  </li>
+</ul>

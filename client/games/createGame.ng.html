@@ -1,0 +1,8 @@
+<h3 ng-hide="signedIn()">Please sign in to create a game</h3>
+{{ user}}
+<form ng-show="signedIn()">
+  <textarea class="textfield" name="paragraph" rows="10" cols="70" ng-model="paragraph">
+  </textarea>
+  <br>
+  <button type="submit" ng-click="createGame(paragraph)">SUBMIT</button>
+</form>
