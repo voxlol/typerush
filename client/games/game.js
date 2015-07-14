@@ -12,12 +12,18 @@ angular.module("app").controller("GameController", ['$scope','$stateParams', '$m
       }
     }
 
-    // var currentPlayerIndex = currentPlayerInput();
-    // $scope.userInput = $scope.match.players[currentPlayerIndex].input;
+    $scope.isAdmin = function(){
+      return $scope.match.creator.email === Meteor.user().emails[0].address;
+    }
 
-    // $scope.userInput =
+    $scope.startMatch = function(){
+      // console.log("STARTING THE MATCH...");
+      $scope.match.timeStarted = moment();
+    }
 
-    // $scope.currentPlayer = $scope.$meteorObject(Meteor.users, {_id: Meteor.userId()});
-    // Need to attach a scope variable to the users input in the thing
-    // console.log(currentPlayerIndex);
+    $scope.displayTime = function(){ // currently working here
+      var startTime = $scope.match.timeStarted;
+      var currentTime = moment();
+      var duration = currentTime;
+    }
 }]);

@@ -1,7 +1,13 @@
 <div class="match">
- Creator : {{ match.creator.email }}<br>
- {{match._id}}
-  <h2>MATCH TEXT</h2>
+  Creator: <span class="creatorEmail">{{ match.creator.email }}</span><br>
+  {{match._id}}<br>
+  {{match.timeStarted}}
+
+  <div class="adminControls" ng-show="isAdmin()">
+    <button class="btn btn-success" type="submit" size="50" ng-click="startMatch()">START MATCH</button>
+  </div>
+
+  <h2>MATCH TEXT<span class="timer" ng-hide="match.timeStarted === null"></span></h2>
   <div class="text">{{match.text}}</div>
   <h3>Current Players</h3>
   {{match.id}}

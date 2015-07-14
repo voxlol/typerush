@@ -30,7 +30,7 @@
   font-weight: bold;
 }
 
-*{
+* {
   font-family: Arial;
 }
 
@@ -40,4 +40,13 @@
 
 textarea {
   font-size: 14px;
+}
+
+.creatorEmail{
+  color: red;
+  font-weight: bold;
+}
+
+.adminControls {
+  margin-top : 15px;
 }
