@@ -1,12 +1,19 @@
 <div class="match">
- ADMIN IS : {{ creator }}<br>
+ Creator : {{ match.creator.email }}<br>
  {{match._id}}
   <h2>MATCH TEXT</h2>
   <div class="text">{{match.text}}</div>
   <h3>Current Players</h3>
   {{match.id}}
 
-  <ul ng-repeat="player in match.players">
-    <li>{{player.email}}</li>
+  <div>
+    <!-- <input size="50" type="text" id="userinput" ng-model="match.players[currentPlayerIndex()].input"> -->
+    <textarea id="userinput" cols="80" rows="5" ng-model="match.players[currentPlayerIndex()].input"></textarea>
+  </div>
+
+  <ul class="player">
+    <li ng-repeat="player in match.players">{{index}}
+      <span class="playername" ng-class="{blue: currentPlayerIndex() == $index}">{{player.email}}</span> : {{player.input }}
+    </li>
   </ul>
 </div>

@@ -9,3 +9,35 @@
 .text{
   width: 500px;
 }
+
+.match .player {
+  list-style-type: none;
+  padding-left: 10px;
+  width: 500px;
+
+}
+
+.match .player li {
+  margin-top : 5px;
+  margin-bottom: 5px;
+}
+
+.match h3 {
+  margin-bottom: 0px;
+}
+
+.playername {
+  font-weight: bold;
+}
+
+*{
+  font-family: Arial;
+}
+
+.blue{
+  color: blue;
+}
+
+textarea {
+  font-size: 14px;
+}
